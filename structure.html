@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angelo Barzaghi - International Screen Printing Expert. 30+ years of expertise in consulting, education, and premium products.">
+    <meta name="keywords" content="screen printing, serigrafia, consulting, training, courses, professional education">
+    <title>Angelo Barzaghi | Professional Screen Printing Expert</title>
+    <style>
+        :root {
+            --color-primary: #2180A0;
+            --color-primary-dark: #1a6480;
+            --color-accent: #E8860B;
+            --color-text: #1a1a1a;
+            --color-text-light: #666;
+            --color-bg: #f9f7f4;
+            --color-surface: #ffffff;
+            --color-border: #e0ddd8;
+            --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            color: var(--color-text);
+            background-color: var(--color-bg);
+        }
+
+        a { color: var(--color-primary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        header {
+            background: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--color-primary);
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+
+        .logo-small { font-size: 11px; color: var(--color-text-light); font-weight: 400; }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--color-text);
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--color-primary); text-decoration: none; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 { color: var(--color-text); margin-top: 0; }
+        h1 { font-size: 48px; line-height: 1.2; }
+        h2 { font-size: 36px; margin-bottom: 40px; }
+        h3 { font-size: 24px; margin-bottom: 20px; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 { color: white; margin-bottom: 20px; font-size: 56px; }
+        .hero p { font-size: 20px; margin: 20px 0 40px; max-width: 700px; margin-left: auto; margin-right: auto; }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: var(--color-accent);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #d17a00;
+            text-decoration: none;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+            text-decoration: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .card {
+            background: var(--color-surface);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: var(--color-primary);
+        }
+
+        .card h3 {
+            color: var(--color-primary);
+            margin-top: 0;
+        }
+
+        .card p { color: var(--color-text-light); }
+
+        .about-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            background: var(--color-primary);
+            padding: 40px;
+            border-radius: 8px;
+            text-align: center;
+            color: white;
+            font-size: 18px;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .stat-box h2 { color: var(--color-primary); margin: 0; }
+        .stat-box p { color: var(--color-text-light); margin: 10px 0 0; }
+
+        .expertise-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .expertise-item {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .expertise-item:before {
+            content: '✓';
+            color: var(--color-primary);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(33, 128, 160, 0.1) 0%, rgba(232, 134, 11, 0.1) 100%);
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid var(--color-primary);
+            margin: 40px 0;
+        }
+
+        .highlight h3 { margin-top: 0; }
+
+        .testimonials {
+            background: var(--color-surface);
+            padding: 60px 40px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            margin-top: 60px;
+        }
+
+        .testimonial-item {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .testimonial-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .testimonial-text { font-style: italic; color: var(--color-text-light); margin-bottom: 10px; }
+        .testimonial-author { font-weight: 600; color: var(--color-primary); }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 40px;
+            border-radius: 8px;
+            margin: 60px 0;
+        }
+
+        .cta-section h2 { color: white; }
+        .cta-section p { font-size: 18px; margin: 20px 0 30px; }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--color-text);
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--color-border);
+            border-radius: 4px;
+            font-family: var(--font-sans);
+            font-size: 14px;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(33, 128, 160, 0.1);
+        }
+
+        textarea { resize: vertical; min-height: 120px; }
+
+        footer {
+            background: var(--color-text);
+            color: white;
+            padding: 60px 0 20px;
+            margin-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        footer h4 { color: var(--color-accent); margin-top: 0; }
+        footer ul { list-style: none; padding: 0; }
+        footer ul li { margin-bottom: 12px; }
+        footer a { color: #ccc; }
+        footer a:hover { color: var(--color-accent); }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .tab-btn {
+            padding: 15px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--color-text-light);
+            border-bottom: 3px solid transparent;
+            font-size: 15px;
+        }
+
+        .tab-btn.active {
+            color: var(--color-primary);
+            border-bottom-color: var(--color-primary);
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .service-detail {
+            margin-bottom: 50px;
+        }
+
+        .service-detail h4 {
+            color: var(--color-primary);
+            font-size: 18px;
+            margin: 25px 0 15px;
+        }
+
+        .service-detail:first-child h4 { margin-top: 0; }
+
+        .product-card {
+            background: var(--color-surface);
+            padding: 25px;
+            border-radius: 8px;
+            border: 1px solid var(--color-border);
+            text-align: center;
+        }
+
+        .product-card h4 { color: var(--color-primary); margin-top: 0; }
+        .product-card .price { font-size: 20px; color: var(--color-accent); font-weight: bold; margin: 10px 0; }
+
+        @media (max-width: 768px) {
+            nav ul { gap: 15px; font-size: 12px; }
+            h1 { font-size: 32px; }
+            h2 { font-size: 26px; }
+            .hero { padding: 60px 0; }
+            .hero h1 { font-size: 36px; }
+            .about-hero { grid-template-columns: 1fr; gap: 30px; }
+            .stats { grid-template-columns: 1fr; }
+            .expertise-list { grid-template-columns: 1fr; }
+            .tab-buttons { flex-wrap: wrap; }
+            .btn-group { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <nav>
+            <div class="logo">
+                Angelo Barzaghi
+                <span class="logo-small">Screen Printing Expert</span>
+            </div>
+            <ul>
+                <li><a href="#home" onclick="scrollToSection('hero')">Home</a></li>
+                <li><a href="#about" onclick="scrollToSection('about')">About</a></li>
+                <li><a href="#services" onclick="scrollToSection('services')">Services</a></li>
+                <li><a href="#products" onclick="scrollToSection('products')">Products</a></li>
+                <li><a href="#resources" onclick="scrollToSection('resources')">Resources</a></li>
+                <li><a href="#contact" onclick="scrollToSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <h1>Transform Your Screen Printing Expertise</h1>
+            <p>30+ years of professional experience in screen printing consulting, education, and premium materials. Serving professionals worldwide.</p>
+            <div class="btn-group">
+                <button class="btn btn-primary" onclick="scrollToSection('contact')">Get Started</button>
+                <button class="btn btn-secondary" onclick="scrollToSection('services')">Explore Services</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+        <div class="container">
+            <h2>About Angelo Barzaghi</h2>
+            
+            <div class="about-hero">
+                <div>
+                    <h3>A Lifetime of Screen Printing Excellence</h3>
+                    <p>Angelo Barzaghi is an internationally recognized screen printing expert, consultant, educator, and author. With over 30 years of dedicated experience in the screen printing industry, Angelo has built a reputation of trust and expertise that transcends borders.</p>
+                    
+                    <p>As a formatore (master trainer) and technical consultant, Angelo has trained hundreds of professionals and helped countless businesses optimize their screen printing operations. His practical, hands-on approach combines theoretical knowledge with real-world solutions.</p>
+
+                    <h4>Professional Credentials</h4>
+                    <ul class="expertise-list">
+                        <li class="expertise-item">Published Author - Multiple Screen Printing Manuals</li>
+                        <li class="expertise-item">Founder - Accademia Serigrafica (Screen Printing Academy)</li>
+                        <li class="expertise-item">Founder - Serigrafia Facile Platform</li>
+                        <li class="expertise-item">International Consultant &amp; Formatore</li>
+                        <li class="expertise-item">Recognized by FESPA - Global Federation of Screen Printers</li>
+                        <li class="expertise-item">Partner with International Premium Suppliers</li>
+                    </ul>
+                </div>
+
+                <div class="about-image">
+                    <div style="text-align: center;">
+                        <div style="font-size: 64px; margin-bottom: 20px;">👨‍🏫</div>
+                        <p><strong>30+ Years</strong> of Professional Experience</p>
+                        <p style="margin-top: 20px; font-size: 16px; line-height: 1.8;">Master Trainer in Screen Printing<br/>International Consultant<br/>Published Author<br/>Academy Founder</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h2>30+</h2>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-box">
+                    <h2>500+</h2>
+                    <p>Professionals Trained</p>
+                </div>
+                <div class="stat-box">
+                    <h2>100+</h2>
+                    <p>Educational Resources</p>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <h3>Mission Statement</h3>
+                <p>To simplify every aspect of screen printing—from learning to production—by providing accessible, highly performant tools and expertise. Angelo Barzaghi transforms passion for screen printing into extraordinary professional results through innovation, excellence, and proven methodologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services">
+        <div class="container">
+            <h2>Services &amp; Expertise</h2>
+
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="switchTab('consulting')">Consulting</button>
+                <button class="tab-btn" onclick="switchTab('training')">Training</button>
+                <button class="tab-btn" onclick="switchTab('digital')">Digital Resources</button>
+            </div>
+
+            <!-- CONSULTING TAB -->
+            <div id="consulting" class="tab-content active">
+                <h3>Professional Consulting Services</h3>
+                <p>Expert guidance for screen printing businesses seeking to optimize operations, improve quality, and increase profitability.</p>
+
+                <div class="service-detail">
+                    <h4>Technical Consulting</h4>
+                    <p>Personalized consulting for equipment selection, process optimization, and technical troubleshooting. Whether you're scaling up production or perfecting specialized techniques, Angelo provides solutions based on decades of practical experience.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>Business Optimization</h4>
+                    <p>Streamline your operations from material sourcing to final delivery. Guidance on equipment investment, workflow efficiency, quality control, and sustainable practices that increase margins without sacrificing quality.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>Custom Training Programs</h4>
+                    <p>Tailored training sessions for your team. From foundational techniques to advanced specialized printing methods, each program is designed around your specific business needs and goals.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>Material &amp; Equipment Recommendations</h4>
+                    <p>Access to exclusive international partnerships ensures you get premium quality products at competitive prices. Personalized recommendations based on your specific application requirements.</p>
+                </div>
+            </div>
+
+            <!-- TRAINING TAB -->
+            <div id="training" class="tab-content">
+                <h3>Training &amp; Educational Programs</h3>
+                <p>Comprehensive education from fundamentals to advanced techniques, delivered through multiple formats to fit your schedule.</p>
+
+                <div class="service-detail">
+                    <h4>Online Courses - Accademia Serigrafica</h4>
+                    <p>Structured, self-paced online courses covering screen printing fundamentals, advanced techniques, and specialized applications. Access to exclusive video content, technical guides, and certification programs.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>Hands-On Classroom Training</h4>
+                    <p>Intensive 2-3 day in-person workshops in Bovisio Masciago, Italy (or customized locations). Small group settings ensure personalized attention. Perfect for those seeking immersive, practical experience.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>Advanced Technical Workshops</h4>
+                    <p>Specialized training on transfer techniques, multi-color printing, industrial processes, ink formulation, screen preparation, heat press operations, and quality control.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>Certification Programs</h4>
+                    <p>Earn recognized certifications demonstrating professional competency in screen printing. Valuable credentials for career advancement and business credibility.</p>
+                </div>
+            </div>
+
+            <!-- DIGITAL RESOURCES TAB -->
+            <div id="digital" class="tab-content">
+                <h3>Digital Resources &amp; Publications</h3>
+                <p>Comprehensive educational materials created from decades of professional experience and teaching expertise.</p>
+
+                <div class="service-detail">
+                    <h4>Books &amp; Practical Manuals</h4>
+                    <p>Published comprehensive guides including "Practical Screen Printing Manual" and specialized technical manuals. Each book contains proven techniques, troubleshooting guides, and industry best practices.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>Video Tutorial Library</h4>
+                    <p>Professional video demonstrations covering foundational techniques, advanced processes, and specialized applications. Available through YouTube and members-only portal.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>Technical Blog &amp; Articles</h4>
+                    <p>Regular technical articles, industry insights, troubleshooting guides, and tips. Stay updated on latest techniques, equipment innovations, and best practices.</p>
+                </div>
+
+                <div class="service-detail">
+                    <h4>FAQ &amp; Troubleshooting Guides</h4>
+                    <p>Comprehensive answers to common questions and solutions for technical challenges faced by screen printers at all levels.</p>
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top: 60px;">
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">For Beginners</h3>
+                    <p>Start your screen printing journey with foundational knowledge, basic techniques, and essential best practices.</p>
+                    <button class="btn btn-primary" onclick="alert('Contact us for beginner programs')">Learn More</button>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">For Professionals</h3>
+                    <p>Advanced techniques, business optimization, and specialized applications to scale your operation.</p>
+                    <button class="btn btn-primary" onclick="alert('Contact us for professional programs')">Learn More</button>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">For Businesses</h3>
+                    <p>Consulting and custom training programs to optimize your team's performance and profitability.</p>
+                    <button class="btn btn-primary" onclick="alert('Contact us for business solutions')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTISE SECTION -->
+    <section style="background: var(--color-surface); padding: 80px 0;">
+        <div class="container">
+            <h2>Areas of Expertise</h2>
+            <p style="font-size: 16px; color: var(--color-text-light); margin-bottom: 40px;">Comprehensive knowledge covering all aspects of screen printing technology and practice.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3 style="color: var(--color-primary);">Screen Printing Fundamentals</h3>
+                    <p>Screen selection, mesh types, frame construction, image preparation, emulsion coating, exposure, reclamation, and basic printing techniques.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--color-primary);">Advanced Techniques</h3>
+                    <p>Transfer printing, multi-color processes, spot color matching, halftone printing, specialty inks, and artistic applications.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--color-primary);">Ink &amp; Chemistry</h3>
+                    <p>Plastisol and water-based inks, ink formulation, additives, color mixing, curing specifications, and specialty ink applications.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--color-primary);">Equipment &amp; Tools</h3>
+                    <p>Manual and automatic presses, heat press operation, flash curing, squeegee selection, substrate handling, and equipment maintenance.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--color-primary);">Quality Control</h3>
+                    <p>Registration and registration controls, color consistency, print durability, troubleshooting common defects, and maintaining standards.</p>
+                </div>
+                <div class="card">
+                    <h3 style="color: var(--color-primary);">Industrial Practices</h3>
+                    <p>Production optimization, workflow efficiency, cost management, safety protocols, sustainability, and professional operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products">
+        <div class="container">
+            <h2>Products &amp; Shop</h2>
+            <p style="font-size: 16px; color: var(--color-text-light); margin-bottom: 40px;">Premium quality products from international partners, exclusively available through Serigrafia Facile.</p>
+
+            <div class="grid">
+                <div class="product-card">
+                    <h4>Premium Inks</h4>
+                    <p style="color: var(--color-text-light); font-size: 14px;">Lancer Group Excalibur inks (exclusive Italian distributor). Plastisol and specialty formulations for all applications.</p>
+                    <div class="price">Custom Pricing</div>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="scrollToSection('contact')">Inquire</button>
+                </div>
+
+                <div class="product-card">
+                    <h4>Equipment &amp; Screens</h4>
+                    <p style="color: var(--color-text-light); font-size: 14px;">Professional-grade frames, mesh, squeegees, and specialized equipment from international suppliers.</p>
+                    <div class="price">Wholesale Available</div>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="scrollToSection('contact')">Inquire</button>
+                </div>
+
+                <div class="product-card">
+                    <h4>Accessories &amp; Tools</h4>
+                    <p style="color: var(--color-text-light); font-size: 14px;">Complete range of supplies: emulsions, exposers, reclamation products, measuring tools, and consumables.</p>
+                    <div class="price">Competitive Rates</div>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="scrollToSection('contact')">Inquire</button>
+                </div>
+
+                <div class="product-card">
+                    <h4>ColorMate Software</h4>
+                    <p style="color: var(--color-text-light); font-size: 14px;">Revolutionary cloud-based software for ink formulation. Mix custom tints instantly with professional results.</p>
+                    <div class="price">SaaS Subscription</div>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="alert('Contact us for ColorMate pricing')">Learn More</button>
+                </div>
+
+                <div class="product-card">
+                    <h4>Training Materials</h4>
+                    <p style="color: var(--color-text-light); font-size: 14px;">Published manuals, video courses, technical guides, and certification programs. Digital and physical formats.</p>
+                    <div class="price">Starting from €29</div>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="alert('Browse our educational catalog')">Shop</button>
+                </div>
+
+                <div class="product-card">
+                    <h4>Custom Solutions</h4>
+                    <p style="color: var(--color-text-light); font-size: 14px;">Bulk orders, wholesale pricing, and custom product packages for professional operations and distributors.</p>
+                    <div class="price">Volume Discounts</div>
+                    <button class="btn btn-primary" style="width: 100%;" onclick="scrollToSection('contact')">Request Quote</button>
+                </div>
+            </div>
+
+            <div class="highlight" style="margin-top: 60px;">
+                <h3>Ordering Information</h3>
+                <p><strong>Secure Online Shop:</strong> Visit our shop at serigrafiafacile.com for complete product catalog and online ordering.</p>
+                <p><strong>Direct Contact:</strong> For wholesale inquiries, bulk orders, or custom solutions: <strong>WhatsApp: +39 351 8678621</strong></p>
+                <p><strong>Shipping:</strong> Fast delivery within 48-78 hours (Italy). International shipping available.</p>
+                <p><strong>Payment Options:</strong> Credit cards, bank transfer, and secure payment methods.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESOURCES SECTION -->
+    <section id="resources" style="background: var(--color-surface);">
+        <div class="container">
+            <h2>Educational Resources</h2>
+            <p style="font-size: 16px; color: var(--color-text-light); margin-bottom: 40px;">Comprehensive library of educational content developed from 30+ years of professional experience.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">📚 Books &amp; Manuals</h3>
+                    <p>Comprehensive printed and digital guides covering fundamentals to advanced techniques. Industry-standard references used by professionals worldwide.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">🎥 Video Tutorials</h3>
+                    <p>Professional video demonstrations with step-by-step instructions. YouTube channel with hundreds of free tutorials. Premium members-only content available.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">✍️ Technical Articles</h3>
+                    <p>Regular blog posts covering industry trends, technical deep-dives, troubleshooting guides, and best practices. Stay current with latest innovations.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">🎓 Certification Programs</h3>
+                    <p>Formal certification programs demonstrating professional competency. Recognized credentials valuable for career advancement and business credibility.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">❓ FAQ &amp; Support</h3>
+                    <p>Comprehensive FAQ section addressing common questions. Direct access to expert support for technical challenges and specific applications.</p>
+                </div>
+
+                <div class="card">
+                    <h3 style="color: var(--color-primary); margin-top: 0;">🌐 Community Forum</h3>
+                    <p>Connect with other screen printing professionals. Share experiences, ask questions, and learn from a global community of practitioners.</p>
+                </div>
+            </div>
+
+            <div class="testimonials">
+                <h3 style="margin-top: 0;">What Professionals Say</h3>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-text">"Angelo's consulting transformed our operation. His technical expertise and practical guidance helped us increase quality while reducing costs. Highly recommended."</div>
+                    <div class="testimonial-author">- Professional Screen Printing Operator, Europe</div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-text">"The training program exceeded expectations. Angelo's hands-on approach and 30+ years of experience made complex techniques accessible and practical."</div>
+                    <div class="testimonial-author">- Owner, Screen Printing Business</div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-text">"As someone new to screen printing, Angelo's educational resources and patient instruction accelerated my learning curve significantly."</div>
+                    <div class="testimonial-author">- Student, Accademia Serigrafica</div>
+                </div>
+
+                <div class="testimonial-item">
+                    <div class="testimonial-text">"Serigrafia Facile's product quality and pricing are unbeatable. Angelo's expert recommendations ensure we always have exactly what we need."</div>
+                    <div class="testimonial-author">- Commercial Printing Studio</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RECOGNITION SECTION -->
+    <section style="padding: 80px 0;">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 60px;">Industry Recognition</h2>
+            
+            <div class="highlight" style="margin-bottom: 40px;">
+                <h3 style="margin-top: 0;">Featured By Leading Industry Organizations</h3>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-top: 0;">FESPA</h4>
+                    <p><strong>Global Federation of Screen Printers &amp; Digital Printers</strong></p>
+                    <p style="font-size: 14px; color: var(--color-text-light);">Recognized expert contributing to the global screen printing community. Affiliated with FESPA's network of 37 national associations.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-top: 0;">CPL Fabbrika</h4>
+                    <p><strong>Serigrafia Italia Portal</strong></p>
+                    <p style="font-size: 14px; color: var(--color-text-light);">Featured expert on CPL Fabbrika's Serigrafia Italia platform. Regular contributor to industry discussions and technical guidance.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-top: 0;">Media &amp; Publications</h4>
+                    <p><strong>Featured Interviews &amp; Articles</strong></p>
+                    <p style="font-size: 14px; color: var(--color-text-light);">Regular appearances in industry publications, podcasts, and media. Recognized authority on screen printing education and practice.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-top: 0;">International Partnerships</h4>
+                    <p><strong>Premium Supplier Network</strong></p>
+                    <p style="font-size: 14px; color: var(--color-text-light);">Exclusive partnerships with leading international manufacturers including Lancer Group, ensuring access to premium products.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-top: 0;">Published Author</h4>
+                    <p><strong>Educational Publications</strong></p>
+                    <p style="font-size: 14px; color: var(--color-text-light);">Author of multiple comprehensive manuals and technical guides. Published works are industry reference materials.</p>
+                </div>
+
+                <div class="card">
+                    <h4 style="color: var(--color-primary); margin-top: 0;">Academy Founder</h4>
+                    <p><strong>Accademia Serigrafica</strong></p>
+                    <p style="font-size: 14px; color: var(--color-text-light);">Founded and directs Accademia Serigrafica, providing structured education to aspiring and professional screen printers globally.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <div class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your Screen Printing?</h2>
+            <p>Get expert consulting, access premium products, or start your education journey today.</p>
+            <button class="btn btn-primary" onclick="scrollToSection('contact')">Contact Angelo Today</button>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p style="text-align: center; color: var(--color-text-light); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Have questions about services, products, or educational programs? Reach out directly for personalized guidance and solutions.
+            </p>
+
+            <div class="contact-form">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select an option</option>
+                            <option value="consulting">Professional Consulting</option>
+                            <option value="training">Training &amp; Education</option>
+                            <option value="products">Products &amp; Supplies</option>
+                            <option value="wholesale">Wholesale Inquiry</option>
+                            <option value="general">General Question</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+
+            <div style="text-align: center; margin-top: 60px; padding-top: 60px; border-top: 1px solid var(--color-border);">
+                <h3 style="color: var(--color-primary);">Direct Contact Options</h3>
+                <p style="font-size: 16px; margin: 15px 0;">
+                    <strong>WhatsApp / Telegram:</strong> <a href="tel:+393518678621">+39 351 8678621</a>
+                </p>
+                <p style="font-size: 16px; margin: 15px 0;">
+                    <strong>Shop &amp; Online Orders:</strong> <a href="https://www.serigrafiafacile.com" target="_blank">www.serigrafiafacile.com</a>
+                </p>
+                <p style="font-size: 16px; margin: 15px 0;">
+                    <strong>Location:</strong> Bovisio Masciago, Italy
+                </p>
+                <p style="font-size: 16px; margin: 15px 0;">
+                    <strong>Follow:</strong> 
+                    <a href="https://www.facebook.com/angelobarzaghi.serigrafia/" target="_blank">Facebook</a> | 
+                    <a href="https://www.instagram.com/angelobarzaghi.serigrafia/" target="_blank">Instagram</a> | 
+                    <a href="https://www.youtube.com/@angelobarzaghi.serigrafia" target="_blank">YouTube</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Professional Consulting</a></li>
+                        <li><a href="#services">Training Programs</a></li>
+                        <li><a href="#services">Online Courses</a></li>
+                        <li><a href="#products">Product Supply</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="#resources">Educational Materials</a></li>
+                        <li><a href="#resources">Video Tutorials</a></li>
+                        <li><a href="#resources">Technical Blog</a></li>
+                        <li><a href="#resources">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="https://www.serigrafiafacile.com" target="_blank">Serigrafia Facile Shop</a></li>
+                        <li><a href="#">Premium Inks</a></li>
+                        <li><a href="#">Equipment</a></li>
+                        <li><a href="#">Wholesale Orders</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/angelobarzaghi.serigrafia/" target="_blank">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/angelobarzaghi.serigrafia/" target="_blank">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/@angelobarzaghi.serigrafia" target="_blank">YouTube</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Angelo Barzaghi | Screen Printing Expert. All rights reserved. | Based in Bovisio Masciago, Italy | Global Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+
+        function switchTab(tabName) {
+            // Hide all tab contents
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+
+            // Show selected tab content
+            const selectedContent = document.getElementById(tabName);
+            if (selectedContent) {
+                selectedContent.classList.add('active');
+            }
+
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            
+            alert(`Thank you, ${name}! Your message has been submitted. We'll contact you at ${email} within 24 hours.\n\nFor immediate inquiries, reach out via WhatsApp: +39 351 8678621`);
+            
+            event.target.reset();
+        }
+
+        // Smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                scrollToSection(targetId);
+            });
+        });
+    </script>
+</body>
+</html>
