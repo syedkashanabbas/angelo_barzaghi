@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Optimo</title>
+  <title>Angelo Barzaghi - Professional Screen Printing Expert</title>
     <link rel="stylesheet" href="./assets/css/font.css">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -11,35 +11,89 @@
 <!-- HEADER -->
 <header class="absolute top-6 left-0 w-full z-30">
   <div class="max-w-6xl mx-auto px-4">
-    <div class="bg-white rounded-full px-10 h-[72px] flex items-center justify-between shadow-md">
-      
+    <div class="bg-white rounded-full px-6 md:px-10 h-[72px] flex items-center justify-between shadow-md">
+
+      <!-- LOGO -->
       <div class="flex items-center">
-        <img 
-          src="assets/img/logo.png" 
-          alt="OPTIMO Logo" 
+        <img
+          src="assets/img/logo.png"
+          alt="OPTIMO Logo"
           class="h-8 w-auto"
         />
       </div>
 
+      <!-- DESKTOP NAV -->
       <nav class="hidden md:flex items-center gap-10 text-gray-600 font-medium text-[15px]">
         <a href="#" class="hover:text-black">Home</a>
         <a href="#" class="hover:text-black">About Us</a>
         <a href="#" class="hover:text-black">Services</a>
         <a href="#" class="hover:text-black">Blog</a>
         <a href="#" class="hover:text-black">Pricing</a>
-      
       </nav>
 
-      <a href="#" class="flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-full text-[14px] font-semibold">
+      <!-- DESKTOP CTA -->
+      <a
+        href="#"
+        class="hidden md:flex items-center gap-2 bg-blue-600 text-white px-5 py-2 rounded-full text-[14px] font-semibold"
+      >
         Contact Us
         <span class="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center text-sm">
           →
         </span>
       </a>
 
+      <!-- MOBILE MENU BUTTON -->
+      <button
+        id="menuBtn"
+        class="md:hidden flex items-center justify-center w-10 h-10 rounded-full border border-black/10"
+      >
+        <img src="assets/svgs/menu.svg" alt="Menu" class="w-5 h-5" />
+      </button>
+
     </div>
   </div>
 </header>
+<!-- Mobile Menu -->
+ <!-- MOBILE MENU OVERLAY -->
+<div
+  id="mobileMenu"
+  class="fixed inset-0 z-40 hidden"
+>
+  <!-- BACKDROP -->
+  <div
+    id="menuBackdrop"
+    class="absolute inset-0 bg-black/40"
+  ></div>
+
+  <!-- SLIDE PANEL -->
+  <div
+    class="absolute right-0 top-0 h-full w-[280px] bg-white p-8 flex flex-col gap-6 transform translate-x-full transition-transform duration-300"
+    id="menuPanel"
+  >
+    <button
+      id="closeMenu"
+      class="self-end text-sm text-gray-500 hover:text-black"
+    >
+     <img src="assets/svgs/close.svg" alt="CLose" class="w-5 h-5" />
+    </button>
+
+    <nav class="flex flex-col gap-4 text-gray-700 font-medium text-[16px] mt-6">
+      <a href="#" class="hover:text-black">Home</a>
+      <a href="#" class="hover:text-black">About Us</a>
+      <a href="#" class="hover:text-black">Services</a>
+      <a href="#" class="hover:text-black">Blog</a>
+      <a href="#" class="hover:text-black">Pricing</a>
+    </nav>
+
+    <a
+      href="#"
+      class="mt-auto flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-full text-sm font-semibold"
+    >
+      Contact Us →
+    </a>
+  </div>
+</div>
+
 
 
 
@@ -81,7 +135,7 @@
 </section>
 
 
-<section class="bg-[#fbf9f6] py-24">
+<section class="bg-white py-24">
   <div class="max-w-6xl mx-auto px-4">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 items-start">
 
@@ -152,72 +206,6 @@
             →
           </span>
         </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<section class="bg-[#fbf9f6] py-28">
-  <div class="max-w-6xl mx-auto px-4">
-
-    <!-- HEADLINE -->
-    <div class="text-center max-w-3xl mx-auto">
-      <h2 class="text-[40px] leading-[1.25] font-medium text-gray-500">
-        With a <span class="text-black font-semibold">98%</span> client
-        <span class="font-serif italic text-gray-500"> satisfaction</span>,
-        <br />
-        our strategies have led to
-        <span class="text-black font-semibold"> $50M+</span> in revenue
-      </h2>
-
-      <p class="mt-6 text-[14px] text-gray-500">
-        Our strategic approach is designed to align with your business
-        goals, helping you scale faster
-      </p>
-    </div>
-
-    <!-- STATS -->
-    <div class="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-6">
-          <img src="assets/svgs/file.svg" alt="" class="w-5 h-5" />
-        </div>
-        <div class="text-[36px] font-semibold text-black">250+</div>
-        <p class="mt-2 text-[13px] text-gray-500 leading-relaxed">
-          Over 300+ clients complete high-impact projects.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-6">
-          <img src="assets/svgs/star.svg" alt="" class="w-5 h-5" />
-        </div>
-        <div class="text-[36px] font-semibold text-black">98%</div>
-        <p class="mt-2 text-[13px] text-gray-500 leading-relaxed">
-          Trusted by hundreds of clients who rate our work highly.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-6">
-          <img src="assets/svgs/people.svg" alt="" class="w-5 h-5" />
-        </div>
-        <div class="text-[36px] font-semibold text-black">50+</div>
-        <p class="mt-2 text-[13px] text-gray-500 leading-relaxed">
-          Our ability to adapt and deliver impactful solutions across.
-        </p>
-      </div>
-
-      <div class="bg-white rounded-2xl p-6 shadow-sm">
-        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-6">
-          <img src="assets/svgs/bulb.svg" alt="" class="w-5 h-5" />
-        </div>
-        <div class="text-[36px] font-semibold text-black">20+</div>
-        <p class="mt-2 text-[13px] text-gray-500 leading-relaxed">
-          Building on years of experience, we provide trusted guidance.
-        </p>
       </div>
 
     </div>
@@ -313,7 +301,7 @@
     </div>
   </div>
 </section>
-<section class="bg-white py-28">
+<section class="bg-slate-200 py-28">
   <div class="max-w-7xl mx-auto px-6">
 
     <!-- HEADER -->
@@ -398,7 +386,74 @@
     </div>
   </div>
 </section>
+
 <section class="bg-white py-28">
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- HEADLINE -->
+    <div class="text-center max-w-3xl mx-auto">
+      <h2 class="text-[40px] leading-[1.25] font-medium text-gray-500">
+        With a <span class="text-black font-semibold">98%</span> client
+        <span class="font-serif italic text-gray-500"> satisfaction</span>,
+        <br />
+        our strategies have led to
+        <span class="text-black font-semibold"> $50M+</span> in revenue
+      </h2>
+
+      <p class="mt-6 text-[14px] text-gray-500">
+        Our strategic approach is designed to align with your business
+        goals, helping you scale faster
+      </p>
+    </div>
+
+    <!-- STATS -->
+    <div class="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+          <img src="assets/svgs/file.svg" alt="" class="w-5 h-5" />
+        </div>
+        <div class="text-[36px] font-semibold text-black">250+</div>
+        <p class="mt-2 text-[13px] text-gray-500 leading-relaxed">
+          Over 300+ clients complete high-impact projects.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+          <img src="assets/svgs/star.svg" alt="" class="w-5 h-5" />
+        </div>
+        <div class="text-[36px] font-semibold text-black">98%</div>
+        <p class="mt-2 text-[13px] text-gray-500 leading-relaxed">
+          Trusted by hundreds of clients who rate our work highly.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+          <img src="assets/svgs/people.svg" alt="" class="w-5 h-5" />
+        </div>
+        <div class="text-[36px] font-semibold text-black">50+</div>
+        <p class="mt-2 text-[13px] text-gray-500 leading-relaxed">
+          Our ability to adapt and deliver impactful solutions across.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-2xl p-6 shadow-sm">
+        <div class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center mb-6">
+          <img src="assets/svgs/bulb.svg" alt="" class="w-5 h-5" />
+        </div>
+        <div class="text-[36px] font-semibold text-black">20+</div>
+        <p class="mt-2 text-[13px] text-gray-500 leading-relaxed">
+          Building on years of experience, we provide trusted guidance.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-200 py-28">
   <div class="max-w-7xl mx-auto px-6">
 
     <!-- HEADER -->
@@ -520,8 +575,80 @@
 
   </div>
 </section>
+<section class="bg-white py-28">
+  <div class="max-w-7xl mx-auto px-6">
 
-<section class="bg-slate-200 py-24">
+    <!-- HEADER -->
+    <div class="max-w-3xl mb-20">
+      <h2 class="text-4xl font-semibold text-black">
+        What Professionals Say
+      </h2>
+      <p class="mt-4 text-sm text-gray-600">
+        Feedback from professionals, business owners, and students across the screen printing industry.
+      </p>
+    </div>
+
+    <!-- TESTIMONIALS GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <div class="rounded-2xl border border-black/10 p-8">
+        <p class="text-sm text-gray-700 leading-relaxed">
+          “Angelo’s consulting transformed our operation. His technical expertise
+          and practical guidance helped us increase quality while reducing costs.
+          Highly recommended.”
+        </p>
+        <p class="mt-6 text-sm font-medium text-black">
+          Professional Screen Printing Operator
+        </p>
+        <p class="text-xs text-gray-500">
+          Europe
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-black/10 p-8">
+        <p class="text-sm text-gray-700 leading-relaxed">
+          “The training program exceeded expectations. Angelo’s hands-on approach
+          and 30+ years of experience made complex techniques accessible and practical.”
+        </p>
+        <p class="mt-6 text-sm font-medium text-black">
+          Owner
+        </p>
+        <p class="text-xs text-gray-500">
+          Screen Printing Business
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-black/10 p-8">
+        <p class="text-sm text-gray-700 leading-relaxed">
+          “As someone new to screen printing, Angelo’s educational resources and
+          patient instruction accelerated my learning curve significantly.”
+        </p>
+        <p class="mt-6 text-sm font-medium text-black">
+          Student
+        </p>
+        <p class="text-xs text-gray-500">
+          Accademia Serigrafica
+        </p>
+      </div>
+
+      <div class="rounded-2xl border border-black/10 p-8">
+        <p class="text-sm text-gray-700 leading-relaxed">
+          “Serigrafia Facile’s product quality and pricing are unbeatable.
+          Angelo’s expert recommendations ensure we always have exactly what we need.”
+        </p>
+        <p class="mt-6 text-sm font-medium text-black">
+          Commercial Printing Studio
+        </p>
+        <p class="text-xs text-gray-500">
+          Professional Client
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-200  py-24">
   <div class="max-w-4xl mx-auto px-4 text-center">
     <h2 class="text-4xl leading-tight font-semibold text-black">
       Ready to Transform Your Screen Printing?
@@ -640,25 +767,25 @@
     </div>
   </div>
 </section>
-<footer class="bg-[#fafafa] pt-28">
+<footer class="bg-[#fafafa] pt-20 md:pt-28">
   <div class="max-w-7xl mx-auto px-6">
 
     <!-- TOP CONTENT -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 pb-24">
+    <div class="grid grid-cols-1 gap-16 md:grid-cols-2 lg:grid-cols-3 md:gap-20 pb-20 md:pb-24">
 
       <!-- NEWSLETTER -->
       <div>
-        <h4 class="text-sm font-semibold text-black mb-6">
+        <h4 class="text-sm font-semibold text-black mb-5">
           Newsletter
         </h4>
 
-        <div class="flex items-center gap-3">
+        <div class="flex flex-col sm:flex-row items-stretch gap-3">
           <input
             type="email"
             placeholder="Enter your email address"
             class="w-full rounded-full border border-black/10 px-5 py-3 text-sm text-black placeholder-gray-400 focus:outline-none focus:border-black"
           />
-          <button class="shrink-0 rounded-full bg-blue-600 px-6 py-3 text-sm font-medium text-white hover:bg-blue-500 transition">
+          <button class="rounded-full bg-blue-600 px-6 py-3 text-sm font-medium text-white hover:bg-blue-500 transition">
             Subscribe
           </button>
         </div>
@@ -670,7 +797,7 @@
 
       <!-- MAIN PAGES -->
       <div>
-        <h4 class="text-sm font-semibold text-black mb-6">
+        <h4 class="text-sm font-semibold text-black mb-5">
           Main Pages
         </h4>
 
@@ -685,7 +812,7 @@
 
       <!-- COMPANY -->
       <div>
-        <h4 class="text-sm font-semibold text-black mb-6">
+        <h4 class="text-sm font-semibold text-black mb-5">
           Company
         </h4>
 
@@ -702,22 +829,22 @@
     </div>
 
     <!-- BOTTOM BAR -->
-    <div class="pb-10">
-      <div class="rounded-3xl bg-blue-600 px-10 py-6">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+    <div class="pb-8 md:pb-10">
+      <div class="rounded-3xl bg-blue-600 px-6 md:px-10 py-6">
+        <div class="flex flex-col text-center md:text-left md:flex-row items-center justify-between gap-6">
 
           <div class="text-white text-lg font-semibold">
             Angelo Barzaghi
           </div>
 
-          <div class="flex items-center gap-8 text-sm text-white/90">
+          <div class="flex flex-wrap justify-center md:justify-start items-center gap-6 text-sm text-white/90">
             <a href="#" class="hover:text-white">Twitter</a>
             <a href="#" class="hover:text-white">LinkedIn</a>
             <a href="#" class="hover:text-white">Facebook</a>
             <a href="#" class="hover:text-white">Instagram</a>
           </div>
 
-          <div class="text-xs text-white/80">
+          <div class="text-xs text-white/80 text-center md:text-right">
             © 2025. All rights reserved.
           </div>
 
@@ -728,6 +855,7 @@
   </div>
 </footer>
 
+<script src="./assets/js/app.js"></script>
 <script>
   const items = document.querySelectorAll('[data-accordion]');
 
